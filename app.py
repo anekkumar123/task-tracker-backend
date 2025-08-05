@@ -13,7 +13,7 @@ SUPABASE_TABLE = 'tasks'
 def home():
     return "✅ Task Tracker API is Live on Render"
 
-@app.route('/submit-task', methods=['POST'])
+@app.route('/submit', methods=['POST'])
 def submit_task():
     data = request.json
     required_fields = ['user', 'task', 'start_time', 'end_time', 'date']
