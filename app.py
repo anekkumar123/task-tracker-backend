@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 SUPABASE_URL = 'https://ofkrurzmtvnzacjzgkhj.supabase.co'
-SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ma3J1cnptdHZuemFjanpna2hqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQzNjU1MjQsImV4cCI6MjA2OTk0MTUyNH0.byoIYML6DiwCZax3GkuxBpHgaA-TgXVTGjw35Uvjd-w'  # Keep this secure
+SUPABASE_KEY = 'os.environ.get('SUPABASE_KEY')'  # Keep this secure
 SUPABASE_TABLE = 'tasks'
 
 @app.route('/')
