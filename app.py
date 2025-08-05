@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
 import requests
+import os
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
 
 SUPABASE_URL = 'https://ofkrurzmtvnzacjzgkhj.supabase.co'
-SUPABASE_KEY = 'os.environ.get('SUPABASE_KEY')'  # Keep this secure
+SUPABASE_KEY = os.environ.get('SUPABASE_KEY')  # Keep this secure
 SUPABASE_TABLE = 'tasks'
 
 @app.route('/')
